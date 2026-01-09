@@ -1,9 +1,11 @@
+/* QUITA MÁRGENES */
 html, body {
     margin: 0;
     padding: 0;
 }
+
+/* BASE */
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     background: #f4f6f8;
@@ -13,8 +15,7 @@ body {
 /* HERO */
 .hero {
     position: relative;
-    height: 100svh; /* viewport real */
-    min-height: 100vh;
+    min-height: calc(100vh + 1px); /* fuerza cobertura total */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -36,7 +37,7 @@ body {
     z-index: -2;
 }
 
-/* OVERLAY OSCURO */
+/* CAPA OSCURA */
 .hero::before {
     content: "";
     position: absolute;
@@ -46,7 +47,7 @@ body {
     z-index: -1;
 }
 
-/* CONTENIDO HERO */
+/* CONTENIDO */
 .hero-content {
     max-width: 900px;
     animation: fadeUp 1.2s ease;
@@ -75,7 +76,7 @@ body {
     }
 }
 
-/* BOTONES */
+/* BOTÓN */
 .btn {
     display: inline-block;
     background: #0A3F46;
@@ -94,7 +95,6 @@ body {
 /* CONTENEDOR */
 .container {
     max-width: 75%;
-    margin-top: 0;
     margin: auto;
     padding: 40px 20px;
 }
