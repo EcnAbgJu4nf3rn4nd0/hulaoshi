@@ -85,3 +85,12 @@ function closeMenu(){
     document.getElementById("navLinks")
     .classList.remove("active");
 }
+
+/* SIEMPRE ARRIBA AL RECARGAR */
+window.onbeforeunload = function () {
+    window.scrollTo(0,0);
+}
+
+window.onload = function(){
+    window.scrollTo(0,0);
+}
