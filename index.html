@@ -1,90 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Hulaoshi Hao | Chino Mandarín</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<title>HulaoshiHao | Taller Chino</title>
 
-    <!-- ICONO -->
-    <link rel="icon" type="image/png" href="logo.png">
+<!-- ICONO -->
+<link rel="icon" type="image/png" href="logo.png">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <nav class="navbar" id="navbar">
 
+    <img src="logo-claro.png" id="logo" class="nav-logo">
+
+    <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#filosofia">Filosofía</a>
+        <a href="#talleres">Talleres</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+</nav>
 <!-- HERO -->
-<header class="hero">
+<header class="hero" id="inicio">
 
     <video autoplay muted loop playsinline class="bg-video">
         <source src="video.mp4" type="video/mp4">
     </video>
 
     <div class="hero-content">
-        <h1>Hulaoshi Hao 胡老师好</h1>
-        <p>Curso profesional de chino mandarín – Desde cero hasta avanzado</p>
-        <a class="btn" href="#contacto">Inscribirme ahora</a>
+        <!--LOGO-->
+        <img src="logo1.png" class="hero-logo" alt="HulaoshiHao">
+        
+        <a class="btn" href="#contacto">Clase demostrativa</a>
     </div>
 
 </header>
 
 <!-- CONTENIDO -->
-<div class="container">
+ <section class="section" id="filosofia">
+    <h2>Filosofía </h2>
+    <p class="section-subtitle">
+        "Aprender es un viaje que no termina mientras el corazón siga latiendo" - Hulaoshi
+    </p>
+</section>
+<div class="container" >
+ 
+<section class="about-wrap">
 
-<section class="section">
-<h2>¿Quiénes somos?</h2>
-<p>
-Hulaoshi Hao es un programa especializado en la enseñanza del chino mandarín,
-dirigido por el profesor 胡老师 (Hu Laoshi).
-</p>
+<div class="strip">
+    <button class="active" onclick="showContent(0)">El origen</button>
+    <button onclick="showContent(1)">Tu mentor</button>
+    <button onclick="showContent(2)">El horizonte</button>
+    <button onclick="showContent(3)">Tu jade interior</button>
+</div>
+
+<div class="panel" id="panel">
+
+    <div class="panel-item active">
+        <img src="inicio.png">
+        <p>
+        HulaoshiHao nace como un proyecto educativo basado en la cultura china, el aprendizaje del idioma mandarín y la disciplina que este desarrolla. Con el tiempo, he comprobado cómo estos factores influyen de forma positiva en los estudiantes, ayudándolos a crecer y mejorar tanto en su vida personal como profesional.
+        </p>
+    </div>
+
+    <div class="panel-item">
+        <img src="profesor.png">
+        <p>
+        Soy Juan Fernando Vizcaíno, economista, abogado y profesor certificado en HSK 4 con una trayectoria de enseñanza de más de 5 años en el idioma. Desde mi formación multidisciplinaria entendí que el mayor aporte que puedo ofrecer es compartir mis conocimientos y experiencias.
+        </p>
+    </div>
+
+    <div class="panel-item">
+        <img src="mision.png">
+        <p>
+        Este taller no solo tiene como objetivo formar estudiantes competentes en el idioma chino mandarín, sino también acompañarlos en un proceso de crecimiento personal, ayudándolos a descubrir su propósito, fortalecer su equilibrio emocional y alcanzar una verdadera paz interior.
+        </p>
+    </div>
+
+    <div class="panel-item">
+        <img src="valor.png">
+        <p>
+        Al igual que el jade, cada persona posee un valor interior que permanece oculto hasta que es trabajado con paciencia, disciplina y constancia, permitiendo que, con el tiempo, su verdadero potencial salga a la luz y se convierta en una fortaleza personal.
+        <br>
+        <strong>¿Te sientes listo para pulir tu jade interior?</strong>
+        </p>
+    </div>
+
+</div>
+
 </section>
 
 <section class="section">
-<h2>Nuestros cursos</h2>
+    <h2>Talleres</h2>
+</section>
 
+<div class="online-dynamic">
+    <span id="onlineText">🗺️ Aprende chino desde donde estés 📍</span>
+</div>
+
+<div class="online-icons">
+    <span>📱 Solo con tu celular o computador 💻</span>
+    <span> Buen internet 🌐</span>
+    <span> Ganas de aprender ❤️‍🔥</span>
+</div>
+<!-- CURSO INTENSIVO -->
+<div class="intensive-bar item" id="talleres" onclick="toggleInfo(event, this)">
+    <img src="banner-intensivo.jpg" class="intensive-banner" alt="Taller intensivo">
+    TALLER INTENSIVO - FECHA DE INICIO: 02 de Marzo 2026
+
+    <div class="course-info">
+        <ul>
+            <li>📅 De lunes a jueves. ⏳ Duración: 10 meses | 🚀 Aprende chino desde cero en menos de un año | 👥 Grupos reducidos para atención personalizada | Durante todo el taller puedes asistir cuando tú quieras, ya sea en horario matutino ☀️ o nocturno 🌙.</li>
+           
+        </ul>
+    </div>
+</div>
+
+<!-- GRID -->
 <div class="cards">
 
-<div class="card">
-<h3>Nivel Básico</h3>
-<p>Pronunciación, pinyin, tonos y vocabulario esencial.</p>
+<div class="card course item" onclick="toggleInfo(event, this)">
+    <h3>Nivel Inicial - HSK 1</h3>
+    <p>Pronunciación, pinyin, tonos y vocabulario esencial.</p>
+
+    <div class="course-info">
+        <ul>
+            <li>✔ Duración: 2 meses</li>
+            <li>✔ Clases en vivo</li>
+            <li>✔ Material PDF</li>
+            <li>✔ Certificado</li>
+        </ul>
+    </div>
 </div>
 
-<div class="card">
-<h3>Nivel Intermedio</h3>
-<p>Conversaciones y lectura guiada.</p>
+<div class="card course item" onclick="toggleInfo(event, this)">
+    <h3>Nivel Básico - HSK 2</h3>
+    <p>Conversaciones y comprensión auditiva.</p>
+
+    <div class="course-info">
+        <ul>
+            <li>✔ Duración: 3 meses</li>
+            <li>✔ Speaking intensivo</li>
+            <li>✔ Simulacros HSK</li>
+        </ul>
+    </div>
 </div>
 
-<div class="card">
-<h3>Nivel Avanzado</h3>
-<p>Preparación HSK y chino profesional.</p>
+<div class="card course item" onclick="toggleInfo(event, this)">
+    <h3>Nivel Intermedio - HSK 3</h3>
+    <p>Preparación HSK y chino profesional.</p>
+
+    <div class="course-info">
+        <ul>
+            <li>✔ HSK 4 – 5</li>
+            <li>✔ Chino de negocios</li>
+            <li>✔ Certificación</li>
+        </ul>
+    </div>
 </div>
 
 </div>
 </section>
-
-<section class="section">
-<h2>¿Por qué estudiar con nosotros?</h2>
-<ul>
-<li>✔ Profesor certificado</li>
-<li>✔ Clases en vivo</li>
-<li>✔ Material en PDF</li>
-<li>✔ Preparación HSK</li>
-</ul>
-</section>
-
+<!--
 <section class="section" id="contacto">
 <h2>Contacto</h2>
 <p>WhatsApp: +593 000 000 000</p>
 <p>Email: contacto@hulaoshihao.com</p>
+</section>-->
+<section class="social-glass" id="contacto">
+
+    <h2>¡Síguenos en Redes Sociales!</h2>
+    
+    <div class="social-wrap">
+
+        <a href="#" class="social-card fb">
+            <i class="fab fa-facebook-f"></i>
+            Facebook
+        </a>
+
+        <a href="#" class="social-card ig">
+            <i class="fab fa-instagram"></i>
+            Instagram
+        </a>
+
+        <a href="#" class="social-card tt">
+            <i class="fab fa-tiktok"></i>
+            TikTok
+        </a>
+
+
+    </div>
+
 </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+    <div>
+        <h3>HulaoshiHao</h3>
+        <p>"Aprender es un viaje que no termina mientras el corazón siga latiendo"</p>
+
+        <div class="footer-box">
+            Domina el idioma que abre puertas al mundo
+        </div>
+    </div>
+
+    <div>
+        <h3>Navegación</h3>
+        <ul>
+            <li>Inicio</li>
+            <li>Sobre</li>
+            <li>Talleres</li>
+            <li>Testimonios</li>
+            <li>Contacto</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Contacto</h3>
+        <p><strong>Ciudad:</strong> Quito</p>
+        <p><strong>Teléfono:</strong> +593 000 000</p>
+        <p><strong>Email:</strong> contacto@hulaoshihao.com</p>
+    </div>
+
+    <div>
+        <h3>Síguenos</h3>
+
+        <div class="footer-social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-tiktok"></i>
+        </div>
+
+        <div class="footer-whatsapp">
+            Consulta por WhatsApp para más información.
+        </div>
+    </div>
 
 </div>
 
-<footer>
-<p>© 2026 Hulaoshi Hao</p>
-</footer>
+<div class="footer-copy">
+© 2026 HulaoshiHao. Todos los derechos reservados.
+</div>
 
-</body>
+</footer>
 </html>

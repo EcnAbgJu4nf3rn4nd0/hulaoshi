@@ -9,7 +9,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     background: #f4f6f8;
-    color: #000;
+    color: #010607;
 }
 
 /* HERO */
@@ -23,6 +23,8 @@ body {
     text-align: center;
     color: white;
     overflow: hidden;
+    padding-top:0 px;
+    margin-top:-1px;
 }
 
 /* VIDEO */
@@ -42,25 +44,39 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #020B0D, #051F24);
+    background: linear-gradient(1deg, #020B0D, #031E23);
     opacity: 0.75;
     z-index: -1;
 }
 
 /* CONTENIDO */
 .hero-content {
-    max-width: 900px;
-    animation: fadeUp 1.2s ease;
+    max-width: 1500px;
+    animation: fadeUp 2.5s ease;
 }
-
-.hero-content h1 {
-    font-size: 70px;
+.hero-content{
+    width:100%;
+    padding:0 5%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+/*
+.hero-content .titulo-es {
+    font-size: clamp(80px, 60 vw, 220px);
     font-weight: bold;
-    letter-spacing: 2px;
+    margin: 0;
 }
 
+.hero-content .titulo-cn {
+    font-size: clamp(80px, 60 vw, 220px);
+    margin: 10px 0 30px;
+    letter-spacing: 6px;
+    color: #C8B56A;
+}
+*/
 .hero-content p {
-    font-size: 22px;
+    font-size: 20px;
     margin: 20px 0;
 }
 
@@ -79,9 +95,9 @@ body {
 /* BOTÓN */
 .btn {
     display: inline-block;
-    background: #0A3F46;
+    background: #005F6A;
     color: white;
-    padding: 12px 25px;
+    padding: 15px 25px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
@@ -89,7 +105,7 @@ body {
 }
 
 .btn:hover {
-    background: #010607;
+    background: #031E23;
 }
 
 /* CONTENEDOR */
@@ -101,14 +117,21 @@ body {
 
 /* SECCIONES */
 .section {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 .section h2 {
     font-size: 30px;
-    color: #0A3F46;
+    color: #005F6A;
+    text-align: center; /* ← CENTRADO */
 }
-
+.section-subtitle{
+    text-align:center;
+    font-size:18px;
+    color:#555;
+    margin-top:8px;
+    font-style:italic;
+}
 /* TARJETAS */
 .cards {
     display: grid;
@@ -129,4 +152,551 @@ footer {
     color: #ccc;
     text-align: center;
     padding: 25px 10px;
+}
+
+.titulo-es {
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.titulo-cn {
+    font-size:clamp(36px, 5vw, 72px);
+    font-weight: normal;
+    letter-spacing: 60px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    /*color: #A8E6CF;  jade suave */
+}
+
+.hero-logo{
+    width: min(90vw, 1500px); /* responsive */
+    max-width: 1500px;
+    height: auto;
+    margin: 0 auto 25px;
+    display: block;
+    object-fit: contain;
+}
+
+/* ANIMACIÓN LOGO */
+@keyframes logoIntro{
+    from{
+        opacity:0;
+        transform: scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+.about-strip{
+    display:flex;
+    width:100%;
+    min-height:300px;
+    gap:10px;
+}
+
+.tab{
+    flex:1;
+    background:#031E23;
+    color:white;
+    padding:25px;
+    cursor:pointer;
+    transition:0.4s;
+    overflow:hidden;
+}
+
+.tab h3{
+    color:#6FE7EA;
+    margin-bottom:15px;
+}
+
+.tab p{
+    opacity:0;
+    max-height:0;
+    transition:0.4s;
+}
+
+.tab.active{
+    flex:3;
+    background:#005F6A;
+}
+
+.tab.active p{
+    opacity:1;
+    max-height:300px;
+}
+
+.about-wrap{
+    max-width:1200px;
+    margin:auto;
+}
+
+.strip{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.strip button{
+    flex:1;
+    background:#031E23;
+    color:#FFFFFF;
+    border:none;
+    padding:15px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+    border-radius:12px;
+    font-size:16px;
+}
+
+.strip button:hover{
+    background:#005F6A;
+}
+
+.panel{
+    margin-top:25px;
+    background:#3A7F8F;
+    padding:20px;
+    border-radius:12px;
+}
+
+.panel-item{
+    display:none;
+    gap:20px;
+    align-items:center;
+}
+
+.panel-item.active{
+    display:flex;
+}
+
+.panel img{
+    width: 250px;
+    border-radius:5px;
+}
+
+.panel p{
+    color:white;
+    font-size:18px;
+    line-height:1.6;
+    text-align:justify;
+}
+
+.strip button.active{
+    background:#18B7C2;
+    color:#031E23;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+    background:rgba(200,181,106,0.30);
+    backdrop-filter:blur(8px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+    box-sizing:border-box; /* CLAVE */
+    z-index:1000;
+    transition:0.5s ease;
+}
+
+
+/* LOGO */
+.nav-logo{
+    height:35px;
+    transition:0.5s ease;
+}
+
+/* ESTADO SCROLL */
+.navbar.scrolled{
+    background:#ffffff;
+    box-shadow:0 8px 30px rgba(0,0,0,.2);
+}
+
+/* ANIMACIÓN */
+.navbar.scrolled .nav-logo{
+    transform:scale(1.5);
+}
+
+.courses-intro{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin:15px 0 5px;
+    color:#005F6A;
+    min-height:30px;
+    transition:.4s;
+}
+
+.courses-icons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:30px;
+    font-size:15px;
+    opacity:.8;
+}
+
+.course{
+    position:relative;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.course:hover{
+    transform:translateY(-5px);
+}
+
+/* RECTANGULO INFERIOR */
+.intensive{
+    background:#005F6A;
+    color:white;
+    text-align:center;
+    padding:10px;
+    border-radius:0 0 10px 10px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+/* INFO OCULTA */
+.course-info{
+    max-height:0;
+    overflow:hidden;
+    transition:.5s ease;
+    margin-top:10px;
+}
+
+.course-info ul{
+    padding:10px 0 0;
+}
+
+.course-info li{
+    font-size:15px;
+    margin:8px 0;
+}
+
+/* ACTIVO */
+.course.active .course-info{
+    max-height:300px;
+}
+
+.courses-grid{
+    grid-template-columns: repeat(3,1fr);
+}
+
+/* RECTANGULO LARGO */
+.intensive-bar{
+    margin-top:25px;
+    background:#005F6A;
+    color:white;
+    text-align:center;
+    padding:18px;
+    border-radius:12px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.intensive-bar:hover{
+    background:#031E23;
+}
+
+/* INFO OCULTA */
+.course-info{
+    max-height:0;
+    overflow:hidden;
+    transition:.5s ease;
+    margin-top:10px;
+}
+
+.course-info li{
+    font-size:15px;
+    margin:8px 0;
+}
+
+/* ACTIVOS */
+.course.active .course-info,
+.intensive-bar.active .course-info{
+    max-height:300px;
+}
+
+.courses-grid{
+    grid-template-columns: repeat(3,1fr);
+}
+
+/* RECTANGULO SUPERIOR */
+.intensive-bar{
+    background:#005F6A;
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:12px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-bottom:30px;
+    transition:.3s;
+}
+
+.intensive-bar:hover{
+    background:#031E23;
+}
+
+/* INFO OCULTA */
+.course-info{
+    max-height:0;
+    overflow:hidden;
+    transition:.5s ease;
+    margin-top:10px;
+}
+
+.course.active .course-info,
+.intensive-bar.active .course-info{
+    max-height:300px;
+}
+
+.course-info li{
+    font-size:19px;
+    margin:8px 0;
+}
+
+/* ACTIVO */
+.course.active .course-info,
+.intensive-bar.active .course-info{
+    max-height:300px;
+}
+.online-dynamic{
+    font-size: clamp(20px,3vw,32px);
+    font-weight:bold;
+    margin:25px 0 10px;
+    color:#c9a227;
+    min-height:40px;
+    transition:opacity .5s ease;
+    text-align:center;   /* ← CENTRAR TEXTO */
+}
+
+.online-icons{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+    font-size:16px;
+    opacity:.9;
+}
+.social-glass{
+    background:#c9a227;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:20px 5px;      /* ↓ altura */
+    max-width:875px;       /* ↓ ancho */
+    margin:40px auto;      /* ↓ espacio exterior */
+    text-align:center;
+    color:#005F6A;
+    box-shadow:0 10px 25px #c9a227;
+    border:1px solid #c9a227;
+}
+
+.social-glass h2{
+    font-size:34px;
+    margin-bottom:10px;
+    margin-top:0; 
+   
+}
+
+.social-wrap{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+/* CARDS */
+.social-card{
+    background:rgba(255,255,255,0.85);
+    color:#111;
+    padding:16px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-width:190px;
+    justify-content:center;
+    transition:.3s;
+    animation:float 4s ease-in-out infinite;
+}
+
+/* retraso animación */
+.social-card:nth-child(2){animation-delay:.5s;}
+.social-card:nth-child(3){animation-delay:1s;}
+.social-card:nth-child(4){animation-delay:1.5s;}
+
+.social-card i{
+    font-size:20px;
+}
+
+/* hover */
+.social-card:hover{
+    transform:translateY(-8px) scale(1.05);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+/* COLORES */
+.fb{color:#005F6A;}
+.ig{color:#005F6A;}
+.tt{color:#005F6A;}
+
+
+/* ANIMACIÓN FLOTANTE */
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+/* SIEMPRE ABIERTOS */
+.course .course-info{
+    max-height:300px !important;
+}
+.footer{
+    background:#010607;
+    padding:20px 10%;
+    color:white;
+    text-align:left
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:8px;
+}
+
+.footer h3{
+    color:#c9a227;
+    margin-bottom:10px;
+}
+
+.footer ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer ul li{
+    margin:8px 0;
+}
+
+.footer-box{
+    margin-top:15px;
+    background:#031E23;
+    padding:12px;
+    border-radius:8px;
+    border-left:4px solid #c9a227;
+    font-size:14px;
+}
+
+.footer-social{
+    display:flex;
+    gap:15px;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.footer-social i{
+    background:#005F6A;
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.footer-social i:hover{
+    transform:scale(1.2);
+}
+
+.footer-whatsapp{
+    background:#005F6A;
+    padding:10px;
+    border-radius:8px;
+    font-size:14px;
+    color:white;
+}
+
+.footer-copy{
+    text-align:center;
+    margin-top:40px;
+    font-size:14px;
+    color:#777;
+}
+.intensive-banner{
+    width:100%;
+    height:180px;      /* ajusta si quieres */
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#c9a227;
+}
+
+/* links */
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    white-space:nowrap; /* evita salto */
+}
+/* contenedor links */
+.nav-links{
+    display:flex;
+    gap:25px;
+    max-width:60%;
+}
+
+/* Cuando hace scroll (barra blanca) */
+.navbar.scrolled .nav-links a{
+    color:#005F6A; /* oscuro */
+}
+
+/* scroll */
+.navbar.scrolled .nav-links a{
+    color:#005F6A;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    scroll-margin-top: 90px; /* ajusta según altura de tu navbar */
+}
+#inicio{
+    scroll-margin-top: 80px;
+}
+
+#filosofia{
+    scroll-margin-top: 100px;
+}
+
+#talleres{
+    scroll-margin-top: 270px;
+}
+
+#contacto{
+    scroll-margin-top: 90px;
+}
+.section h2{
+    margin-top: 100px; /* baja la palabra Talleres */
 }
