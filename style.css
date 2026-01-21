@@ -700,6 +700,7 @@ section{
 .section h2{
     margin-top: 100px; /* baja la palabra Talleres */
 }
+
 /* ==========================
    📱 RESPONSIVE MOBILE
 ========================== */
@@ -714,10 +715,7 @@ section{
 
 /* BOTÓN */
 .menu-btn{
-    display:block;
-    font-size:26px;
-    color:white;
-    cursor:pointer;
+    display:block; /* SOLO celular */
 }
 
 /* PANEL LATERAL */
@@ -806,8 +804,9 @@ section{
 }
 
 .social-card{
-    width:90%;
-    max-width:320px;
+    width:85%;
+    max-width:260px;
+    padding:12px 15px;
 }
 
 /* FOOTER */
@@ -828,4 +827,20 @@ section{
 
 body{
     overflow-x:hidden;
+}
+@media(max-width:768px){
+
+/* LOGO NAV */
+.nav-logo{
+    height:28px;      /* más pequeño */
+    max-width:150px;  /* evita que se salga */
+    object-fit:contain;
+}
+.navbar{
+    display:flex;
+    align-items:center;
+}
+}
+.menu-btn{
+    display:none !important;
 }
