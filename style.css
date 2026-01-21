@@ -841,6 +841,8 @@ body{
 /* OCULTO EN PC */
 .menu-btn{
     display:none;
+    color:white;
+    transition:0.3s;
 }
 
 /* SOLO MOVIL */
@@ -853,4 +855,8 @@ body{
     z-index:99999;
 }
 
+}
+/* Cuando la barra se vuelve blanca */
+.navbar.scrolled .menu-btn{
+    color:#005F6A; /* oscuro */
 }
