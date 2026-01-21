@@ -95,3 +95,31 @@ window.onload = function(){
     window.scrollTo(0,0);
 }
 
+/* MENSAJE WHATSAPP */
+
+setTimeout(()=>{
+    document.querySelector(".whatsapp-msg").style.display="block";
+},10000); // aparece a los 10s
+
+setTimeout(()=>{
+    document.querySelector(".whatsapp-msg").style.display="none";
+},40000); // desaparece a los 40s (10s + 30s)
+
+/* MENSAJE WHATSAPP ANIMADO */
+
+function showWhatsMsg(){
+    const msg = document.querySelector(".whatsapp-msg");
+
+    msg.classList.add("show");
+
+    /* ocultar luego de 30s */
+    setTimeout(()=>{
+        msg.classList.remove("show");
+    },30000);
+}
+
+/* primera vez */
+setTimeout(showWhatsMsg,10000);
+
+/* repetir cada 60s */
+setInterval(showWhatsMsg,60000);
