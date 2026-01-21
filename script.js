@@ -50,7 +50,7 @@ function toggleInfo(e, clicked){
 }
 
 const onlineTexts = [
- "🗺️ Aprende chino desde donde estés 📍",
+ "🗺️ Aprende chino desde donde estés📍",
  "🗺️ 无论你在哪里，都可以学习中文 📍",
  "🖱️ Tu aula a un click 🧑‍💻",
  "🖱️ 一键进入你的课堂 🧑‍💻",
