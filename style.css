@@ -713,10 +713,6 @@ section{
     height:65px;
 }
 
-/* BOTÓN */
-.menu-btn{
-    display:block; /* SOLO celular */
-}
 
 /* PANEL LATERAL */
 .nav-links{
@@ -841,6 +837,20 @@ body{
     align-items:center;
 }
 }
+
+/* OCULTO EN PC */
 .menu-btn{
     display:none;
+}
+
+/* SOLO MOVIL */
+@media(max-width:768px){
+
+.menu-btn{
+    display:block;
+    font-size:28px;
+    color:white;
+    z-index:99999;
+}
+
 }
