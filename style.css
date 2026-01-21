@@ -721,7 +721,10 @@ section{
     right:-100%;       /* OCULTO */
     width:70%;
     height:100vh;
-    background:#fff;
+    background:rgba(255,255,255,0.85); /* translúcido */
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    box-shadow:-10px 0 30px rgba(0,0,0,0.2);
     flex-direction:column;
     align-items:center;
     justify-content:center;
@@ -859,4 +862,13 @@ body{
 /* Cuando la barra se vuelve blanca */
 .navbar.scrolled .menu-btn{
     color:#005F6A; /* oscuro */
+}
+
+@media(max-width:768px){
+
+/* Cuando hace scroll */
+.navbar.scrolled .nav-logo{
+    margin-left:15px;   /* mueve a la derecha */
+}
+
 }
