@@ -17,9 +17,14 @@
 <body>
     <nav class="navbar" id="navbar">
 
+    <!-- LOGO -->
     <img src="logo-claro.png" id="logo" class="nav-logo">
 
-    <div class="nav-links">
+    <!-- BOTÓN MENÚ (solo móvil) -->
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <!-- LINKS -->
+    <div class="nav-links" id="navLinks">
         <a href="#inicio">Inicio</a>
         <a href="#filosofia">Filosofía</a>
         <a href="#talleres">Talleres</a>
@@ -128,40 +133,47 @@
 
 <div class="card course item" onclick="toggleInfo(event, this)">
     <h3>Nivel Inicial - HSK 1</h3>
+     <h3>Martes, Jueves y Viernes</h3>
+    <h3>18h00-19h00</h3>
     <p>Pronunciación, pinyin, tonos y vocabulario esencial.</p>
 
     <div class="course-info">
         <ul>
-            <li>✔ Duración: 2 meses</li>
+            <li>✔ Duración: 4 meses</li>
             <li>✔ Clases en vivo</li>
             <li>✔ Material PDF</li>
-            <li>✔ Certificado</li>
+            <li>✔ Se graban las sesiones</li>
         </ul>
     </div>
 </div>
 
 <div class="card course item" onclick="toggleInfo(event, this)">
     <h3>Nivel Básico - HSK 2</h3>
+    <h3>Martes y Jueves</h3>
+    <h3>16h30-18h00</h3>
     <p>Conversaciones y comprensión auditiva.</p>
 
     <div class="course-info">
         <ul>
-            <li>✔ Duración: 3 meses</li>
+            <li>✔ Duración: 4 meses</li>
             <li>✔ Speaking intensivo</li>
-            <li>✔ Simulacros HSK</li>
+            <li>✔ Simulacros HSK 2</li>
+            <li>✔ Gramática básica</li>
         </ul>
     </div>
 </div>
 
 <div class="card course item" onclick="toggleInfo(event, this)">
     <h3>Nivel Intermedio - HSK 3</h3>
-    <p>Preparación HSK y chino profesional.</p>
-
+    <h3>Lunes y Miercoles</h3>
+    <h3>16h30-18h00</h3>
+    <p>Preparación HSK 3.</p>
     <div class="course-info">
         <ul>
-            <li>✔ HSK 4 – 5</li>
-            <li>✔ Chino de negocios</li>
-            <li>✔ Certificación</li>
+            <li>✔ Gramática intermedia</li>
+            <li>✔ Inicio de chino de negocios</li>
+            <li>✔ Preparación para certificación</li>
+            <li>✔ Clases en vivo</li>
         </ul>
     </div>
 </div>

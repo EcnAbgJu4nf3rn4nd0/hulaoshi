@@ -69,3 +69,8 @@ setInterval(()=>{
     },500);
 
 },3000);
+
+function toggleMenu(){
+    document.getElementById("navLinks")
+    .classList.toggle("active");
+}

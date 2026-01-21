@@ -700,3 +700,132 @@ section{
 .section h2{
     margin-top: 100px; /* baja la palabra Talleres */
 }
+/* ==========================
+   📱 RESPONSIVE MOBILE
+========================== */
+
+@media (max-width: 768px){
+
+/* NAVBAR */
+.navbar{
+    padding:0 15px;
+    height:65px;
+}
+
+.nav-links{
+    position:fixed;
+    top:65px;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:25px 0;
+    transform:translateY(-120%);
+    transition:.4s;
+}
+
+.nav-links.active{
+    transform:translateY(0);
+}
+
+.nav-links a{
+    color:#005F6A;
+    font-size:18px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-btn{
+    display:block;
+    font-size:26px;
+    color:white;
+    cursor:pointer;
+}
+
+.navbar.scrolled .menu-btn{
+    color:#005F6A;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+}
+
+.hero-logo{
+    width:90%;
+}
+
+/* CONTENEDOR */
+.container{
+    max-width:100%;
+    padding:20px 10px;
+}
+
+/* PANEL FILOSOFÍA */
+.panel-item{
+    flex-direction:column;
+    text-align:center;
+}
+
+.panel img{
+    width:100%;
+}
+
+/* STRIP BOTONES */
+.strip{
+    flex-wrap:wrap;
+}
+
+.strip button{
+    font-size:14px;
+    padding:10px;
+}
+
+/* CARDS */
+.cards{
+    grid-template-columns:1fr;
+}
+
+/* BARRA INTENSIVO */
+.intensive-bar{
+    font-size:14px;
+    padding:15px;
+}
+
+/* ICONOS */
+.online-icons{
+    flex-direction:column;
+    gap:10px;
+}
+
+/* SOCIAL */
+.social-wrap{
+    flex-direction:column;
+}
+
+.social-card{
+    width:100%;
+}
+
+/* FOOTER */
+.footer{
+    padding:20px;
+}
+
+.footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.footer-social{
+    justify-content:center;
+}
+.menu-btn{
+    display:block;  /* SOLO SE VE EN CELULAR */
+}
+
+}
+.menu-btn{
+    display:none;   /* OCULTO EN PC */
+}
