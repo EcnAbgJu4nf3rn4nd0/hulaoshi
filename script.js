@@ -74,3 +74,8 @@ function toggleMenu(){
     document.getElementById("navLinks")
     .classList.toggle("active");
 }
+
+function closeMenu(){
+    document.getElementById("navLinks")
+    .classList.remove("active");
+}

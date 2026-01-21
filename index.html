@@ -17,18 +17,15 @@
 <body>
     <nav class="navbar" id="navbar">
 
-    <!-- LOGO -->
     <img src="logo-claro.png" id="logo" class="nav-logo">
 
-    <!-- BOTÓN MENÚ (solo móvil) -->
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-    <!-- LINKS -->
     <div class="nav-links" id="navLinks">
-        <a href="#inicio">Inicio</a>
-        <a href="#filosofia">Filosofía</a>
-        <a href="#talleres">Talleres</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#inicio" onclick="closeMenu()">Inicio</a>
+        <a href="#filosofia" onclick="closeMenu()">Filosofía</a>
+        <a href="#talleres" onclick="closeMenu()">Talleres</a>
+        <a href="#contacto" onclick="closeMenu()">Contacto</a>
     </div>
 
 </nav>
@@ -118,7 +115,7 @@
 <!-- CURSO INTENSIVO -->
 <div class="intensive-bar item" id="talleres" onclick="toggleInfo(event, this)">
     <img src="banner-intensivo.jpg" class="intensive-banner" alt="Taller intensivo">
-    TALLER INTENSIVO - FECHA DE INICIO: 02 de Marzo 2026
+    👇TALLER INTENSIVO - FECHA DE INICIO: 02 de Marzo 2026👇
 
     <div class="course-info">
         <ul>
@@ -139,7 +136,7 @@
 
     <div class="course-info">
         <ul>
-            <li>✔ Duración: 4 meses</li>
+            <li>✔ Duración: 3 meses</li>
             <li>✔ Clases en vivo</li>
             <li>✔ Material PDF</li>
             <li>✔ Se graban las sesiones</li>
@@ -167,10 +164,10 @@
     <h3>Nivel Intermedio - HSK 3</h3>
     <h3>Lunes y Miercoles</h3>
     <h3>16h30-18h00</h3>
-    <p>Preparación HSK 3.</p>
+    <p>Preparación HSK 3 y conversación cotidiana.</p>
     <div class="course-info">
         <ul>
-            <li>✔ Gramática intermedia</li>
+            <li>✔ Duración 4 meses</li>
             <li>✔ Inicio de chino de negocios</li>
             <li>✔ Preparación para certificación</li>
             <li>✔ Clases en vivo</li>
