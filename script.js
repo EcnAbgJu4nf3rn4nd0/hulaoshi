@@ -3,7 +3,6 @@ function showContent(index){
     let items = document.querySelectorAll(".panel-item");
     let buttons = document.querySelectorAll(".strip button");
 
-    /* Oculta todos */
     items.forEach(item=>{
         item.classList.remove("active");
     });
@@ -12,10 +11,10 @@ function showContent(index){
         btn.classList.remove("active");
     });
 
-    /* Activa el seleccionado */
     items[index].classList.add("active");
     buttons[index].classList.add("active");
 }
+
 window.addEventListener("scroll", ()=>{
 
     let nav = document.getElementById("navbar");
@@ -28,10 +27,14 @@ window.addEventListener("scroll", ()=>{
         nav.classList.remove("scrolled");
         logo.src = "logo-claro.png";
     }
+
+    /* CIERRA MENÚ AL HACER SCROLL */
+    closeMenu();
 });
+
 function toggleInfo(e, clicked){
 
-    e.stopPropagation(); // EVITA QUE SE DISPARE OTRO CLICK
+    e.stopPropagation();
 
     let items = document.querySelectorAll(".item");
 
@@ -45,6 +48,7 @@ function toggleInfo(e, clicked){
 
     });
 }
+
 const onlineTexts = [
  "🗺️ Aprende chino desde donde estés 📍",
  "🗺️ 无论你在哪里，都可以学习中文 📍",
@@ -69,6 +73,8 @@ setInterval(()=>{
     },500);
 
 },3000);
+
+/* MENU */
 
 function toggleMenu(){
     document.getElementById("navLinks")

@@ -712,30 +712,7 @@ section{
     height:65px;
 }
 
-.nav-links{
-    position:fixed;
-    top:65px;
-    left:0;
-    width:100%;
-    background:#fff;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-    padding:25px 0;
-    transform:translateY(-120%);
-    transition:.4s;
-}
-
-.nav-links.active{
-    transform:translateY(0);
-}
-
-.nav-links a{
-    color:#005F6A;
-    font-size:18px;
-}
-
-/* BOTÓN HAMBURGUESA */
+/* BOTÓN */
 .menu-btn{
     display:block;
     font-size:26px;
@@ -743,8 +720,31 @@ section{
     cursor:pointer;
 }
 
-.navbar.scrolled .menu-btn{
+/* PANEL LATERAL */
+.nav-links{
+    position:fixed;
+    top:0;
+    right:-100%;       /* OCULTO */
+    width:70%;
+    height:100vh;
+    background:#fff;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:25px;
+    transition:.4s ease;
+    z-index:9999;
+}
+
+/* ABIERTO */
+.nav-links.active{
+    right:0;
+}
+
+/* LINKS */
+.nav-links a{
     color:#005F6A;
+    font-size:20px;
 }
 
 /* HERO */
@@ -772,7 +772,7 @@ section{
     width:100%;
 }
 
-/* STRIP BOTONES */
+/* STRIP */
 .strip{
     flex-wrap:wrap;
 }
@@ -787,7 +787,7 @@ section{
     grid-template-columns:1fr;
 }
 
-/* BARRA INTENSIVO */
+/* INTENSIVO */
 .intensive-bar{
     font-size:14px;
     padding:15px;
@@ -802,10 +802,12 @@ section{
 /* SOCIAL */
 .social-wrap{
     flex-direction:column;
+    align-items:center;
 }
 
 .social-card{
-    width:100%;
+    width:90%;
+    max-width:320px;
 }
 
 /* FOOTER */
@@ -821,57 +823,9 @@ section{
 .footer-social{
     justify-content:center;
 }
-.menu-btn{
-    display:block;  /* SOLO SE VE EN CELULAR */
-}
 
 }
-.menu-btn{
-    display:none;   /* OCULTO EN PC */
-}
-/* ===== NAV FIX MOBILE ===== */
 
-.menu-btn{
-    display:none;
-    font-size:26px;
-    cursor:pointer;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.navbar{
-    padding:0 15px;
-}
-
-.menu-btn{
-    display:block;
-    color:white;
-}
-
-/* MENU DESPLEGABLE */
-.nav-links{
-    position:fixed;
-    top:65px;
-    left:0;
-    width:100%;
-    background:white;
-    flex-direction:column;
-    align-items:center;
-    padding:20px 0;
-    gap:20px;
-    transform:translateY(-120%);
-    transition:.4s;
-    z-index:999;
-}
-
-.nav-links.active{
-    transform:translateY(0);
-}
-
-.nav-links a{
-    color:#005F6A;
-    font-size:18px;
-}
-
+body{
+    overflow-x:hidden;
 }
